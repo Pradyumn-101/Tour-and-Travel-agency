@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Goa tour package</title>
+  <title>Kerela tour package</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<style>
+p{
+  font-size:large;
+  font-family: 'Nunito', sans-serif;
+
+}
+img{
+  padding-top: 2px;
+  height: 40rem;
+  width:100%;
+  object-fit: cover;
+}
+
+</style>
+
+<body>
+  <!-- headerstarts  -->
+  <header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>Next</span>trip</a>
+
+    <nav class="navbar">
+        <a href="../index.html">home</a>
+        <a href="../contact.html" target="_blank">contact</a>
+    </nav>
+
+</header>
+
+<div >
+  <img src="../images/kerala-tour-1.jpg" alt="">
+</div>
+
+<section class="book" id="book">
+
+  <h1 class="heading">
+      <span>K</span>
+      <span>E</span>
+      <span>R</span>
+      <span>A</span>
+      <span>L</span>
+      <span>A</span>
+      <span> </span>
+      
+  </h1>
+
+  <div class="row">
+
+      <div class="image">
+        <p>Investigate our gathering of elegantly made Kerala visit bundles which have been customized to different topics and claims to fame in order to suit you whether you are arranging a family occasion in Kerala, a spa break in a portion of the best Ayurveda withdraws in India or whether you are searching for a lovely start with sentimental special night visit bundles. Kerala with its palm bordered backwaters, beautiful slope stations, plentiful untamed life, energetic culture, rich legacy and reviving Ayurvedic treatments is no big surprise alluded to as the "God's own particular Country." Incorporated into the National Geographic Travelers rundown of "one of the 50 must see goals of a lifetime," Kerala is one of the must visit places on the off chance that you are searching for occasion bundles in India.</p><span id="dots"></span><span id="more">
+          <p>Special first night is a shot for a recently married couple with the goal that they can become acquainted with each other and make the best recollections of their life. A standout amongst other goals in south India to go for wedding trip, Kerala is a flat out heaven for honeymooners. The state has numerous stunning vacationer recognizes that abandon you awestruck and furnish you with some lifetime recollections. The palm-bordered backwaters and the laid-back shorelines of Kerala have been blessed with an air of adoration and sentiment. This 7-night and 8-day Honeymoon bundle for Kerala gives you a chance to begin a crisp and new section of affection. This all around arranged schedule takes you to prime goals of Kerala including Munnar, Cochin, Thekkady, Alleppey, Kovalam and Trivandrum.</p> 
+      </div>
+
+      <form method="POST" name="google-sheet" >
+        <div class="inputBox">
+            <h3>Name</h3>
+            <input type="text" name="Name"placeholder="Enter your name">
+        </div>
+        <div class="inputBox">
+            <h3>Where to</h3>
+            <input type="text" name="Where to" placeholder="Enter place">
+        </div>
+        <div class="inputBox">
+            <h3>Contact</h3>
+            <input type="number"   name="Contact" placeholder="Enter contact number">
+        </div>
+        <div class="inputBox">
+            <h3>Arrival</h3>
+            <input type="date" name="Arrival">
+        </div>
+        <input type="submit" class="btn" name="submit" value="Submit">
+    </form>
+
+
+  </div>
+
+</section>
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>about us</h3>
+          <p>Our company has been committed to bringing travelers the best in value and quality travel
+              arrangements. We are passionate about travel and providing corporate travelers high-touch
+              services. </p>
+      </div>
+      <div class="box">
+          <h3>Holidays</h3>
+          <a href="#">Family Tours</a>
+          <a href="#">Honeymonn Tours</a>
+          <a href="#">Beach Tours</a>
+          <a href="#">Adventure Tours</a>
+      </div>
+      <div class="box">
+          <h3>Pilgrimage</h3>
+          <a href="#">Vaishnodevi Yatra</a>
+          <a href="#">Amarnath Yatra</a>
+          <a href="#">Kedarnath Yatra</a>
+          <a href="#">Dodham Yatra</a>
+          <a href="#">Chardham Yatra</a>
+      </div>
+
+  </div>
+
+</section>
+<div class="footer-copyright">
+  <p>Copyright © 2022 EazeeTrip, All rights reserved.</p>
+</div>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby623Lg5j2vPmAwtlMQS_fUKnifyaoFuiSVRTSU9-0fSqqEsfWRXT3jxoscWIG2gAHDGw/exec'
+  const form = document.forms['google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>

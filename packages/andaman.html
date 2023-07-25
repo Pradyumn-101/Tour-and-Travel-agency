@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andaman tour package</title>
+  <link rel="stylesheet" href="../style.css">
+  
+<style>
+  p{
+    font-size:large;
+    font-family: 'Nunito', sans-serif;
+  
+  }
+  img{
+    padding-top: 2px;
+    height: 40rem;
+    width:100%;
+    object-fit: cover;
+  }
+  
+  </style>
+</head>
+
+<body>
+  <!-- headerstarts  -->
+  <header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>Next</span>trip</a>
+
+    <nav class="navbar">
+        <a href="../index.html">home</a>
+        <a href="../contact.html" target="_blank">contact</a>
+    </nav>
+
+</header>
+
+<div >
+  <img src="../images/andaman-tour-4.jpg" alt="">
+</div>
+
+<section class="book" id="book">
+
+  <h1 class="heading">
+      <span>A</span>
+      <span>N</span>
+      <span>D</span>
+      <span>A</span>
+      <span>M</span>
+      <span>A</span>
+      <span>N</span>
+      <span> </span>
+      
+  </h1>
+
+  <div class="row">
+
+      <div class="image">
+        <p>The Andaman and Nicobar Islands make a stunning archipelago in the Bay of Bengal at the southern tip of India. If you were always fascinate by the tropical beauty of islands that figured out how to stay immaculate by the air of modernity, then Andaman and Nicobar islands are absolutely what you are looking for. Andaman, the ideal go-to destination is also a significant place to fall into its exciting water sports activities. Andaman Holidays are a perfect getaway off the mainland, be filled with activities for family and friends such as adventure and water sports, trekking and sightseeing across the island. We provide you a wide range of Andaman Tour Packages for your perfect holiday in the Islands. The perfect time to visit Andaman and Nicobar islands is from October to March when the weather is good and delightful.</p>
+				<span id="dots"></span><span id="more">
+				<h2>Best Time to Visit Andaman</h2>
+				<p>Andaman is the place with minimum changes in the temperature that means it is always pleasant to visit. The Best Time to visit Andaman is Considered from May to November.</p>
+				<h2>How to Reach Andaman</h2>
+				<p>You can reach to Andaman either by taking the direct flight to PortBlair From Delhi, Mumbai, Kolkata, Chennai etc. or by taking Sail/ship from Chennai , Vizag and Kolkata It takes Approximately 60-70 Hours to reach.</p>
+				<h2>Places to See in Andaman</h2>
+				<p>In Adaman you can see Cellular Jail National Memorial, Havelock’s Gem- Radhanagar Beach, Explore What’s Underneath the Turquoise Waters of Havelock Island, Ross Island, Museum Circuit, Rajiv Gandhi Water Sports Complex, Sea Walking at North Bay Beach, Mahatma Gandhi Marine National Park, Diglipur, Chidiya Tapu and hog on the delectable seafood</p>
+				<h2>What to Eat in Andaman</h2>
+				<p>The culture of Andaman and Nicobar Islands are similar to Indian culture. This is also reflecting in their food culture. Sea foods are the main cuisine of Andamanese. So Andaman is the paradise of sea food lovers. Lobsters, Crab, Prawns, Cuttle fish, and fish of every kind is found here. Vegetarians don’t worry!! There are plenty of delicious vegetarian dishes are available.</p>
+      </div>
+
+      <form method="POST" name="google-sheet" >
+        <div class="inputBox">
+            <h3>Name</h3>
+            <input type="text" name="Name"placeholder="Enter your name">
+        </div>
+        <div class="inputBox">
+            <h3>Where to</h3>
+            <input type="text" name="Where to" placeholder="Enter place">
+        </div>
+        <div class="inputBox">
+            <h3>Contact</h3>
+            <input type="number"   name="Contact" placeholder="Enter contact number">
+        </div>
+        <div class="inputBox">
+            <h3>Arrival</h3>
+            <input type="date" name="Arrival">
+        </div>
+        <input type="submit" class="btn" name="submit" value="Submit">
+    </form>
+
+
+  </div>
+
+</section>
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>about us</h3>
+          <p>Our company has been committed to bringing travelers the best in value and quality travel
+              arrangements. We are passionate about travel and providing corporate travelers high-touch
+              services. </p>
+      </div>
+      <div class="box">
+          <h3>Holidays</h3>
+          <a href="#">Family Tours</a>
+          <a href="#">Honeymonn Tours</a>
+          <a href="#">Beach Tours</a>
+          <a href="#">Adventure Tours</a>
+      </div>
+      <div class="box">
+          <h3>Pilgrimage</h3>
+          <a href="#">Vaishnodevi Yatra</a>
+          <a href="#">Amarnath Yatra</a>
+          <a href="#">Kedarnath Yatra</a>
+          <a href="#">Dodham Yatra</a>
+          <a href="#">Chardham Yatra</a>
+      </div>
+
+  </div>
+
+</section>
+<div class="footer-copyright">
+  <p>Copyright © 2022 EazeeTrip, All rights reserved.</p>
+</div>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby623Lg5j2vPmAwtlMQS_fUKnifyaoFuiSVRTSU9-0fSqqEsfWRXT3jxoscWIG2gAHDGw/exec'
+  const form = document.forms['google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
